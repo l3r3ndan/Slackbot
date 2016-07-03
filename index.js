@@ -33,13 +33,19 @@ bot.startRTM(function(error, whichBot, payload) {
 
 });
 
- controller.hears('lunch','direct_message,direct_mention',function(whichbot,message) {  
+ controller.hears('lunch','direct_message,direct_mention',function(whichbot,message) {
     whichbot.reply(message,"WOOO~ Let's eat!!");
 });
 
- controller.hears('owner','direct_message,direct_mention',function(whichbot,message) {  
+ controller.hears('owner','direct_message,direct_mention',function(whichbot,message) {
     whichbot.reply(message,'Brendan');
 });
+
+controller.hears('photo','direct_message,direct_mention',function(whichbot,message) {
+   whichbot.reply(message,'http://giphy.com/gifs/randy-savage-macho-PR9hNqiYTEJtm');
+});
+
+
 
 
  //Order Pizza Conversation
@@ -123,12 +129,9 @@ controller.hears('camel','direct_message,direct_mention',function(whichbot,messa
     // then respond with a message object
     //
     whichbot.reply(message,{
-      text: "Hi I'm Camelman yyeeaahh",
-      username: "CamelMan",
+      text: "Hi I'm a Camel",
+      username: "Camel",
       icon_emoji: ":camel:",
     });
 
 })
-
-
-
